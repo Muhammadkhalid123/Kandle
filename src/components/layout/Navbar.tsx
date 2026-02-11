@@ -33,7 +33,7 @@ export function Navbar() {
             src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.svg"
             alt="Kandle Direct Publishing"
             fill
-            className="object-contain p-1"
+            className="object-contain scale-125"
             priority
           />
         </div>
