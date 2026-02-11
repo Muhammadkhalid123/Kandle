@@ -93,7 +93,7 @@ export function ContactPopup() {
                                     <div className="flex justify-center mb-6">
                                         <Image
                                             src="/images/form-logo.png"
-                                            alt="Kandle Publishing"
+                                            alt="Kandle Direct Publishing"
                                             width={400}
                                             height={160}
                                             className="h-40 w-auto object-contain"

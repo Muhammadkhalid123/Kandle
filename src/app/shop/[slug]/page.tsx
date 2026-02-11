@@ -45,7 +45,7 @@ export default function ProductPage() {
     };
 
     const handleShare = () => {
-        shareContent(book.title, `Check out ${book.title} on Kandle Publishing!`);
+        shareContent(book.title, `Check out ${book.title} on Kandle Direct Publishing!`);
     };
 
 

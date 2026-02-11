@@ -27,7 +27,7 @@ export default function AboutPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-[12vw] md:text-[8vw] font-black uppercase tracking-tighter leading-[0.8] mb-12">
+                        <h1 className="text-[10vw] md:text-[8vw] font-black uppercase tracking-tighter leading-[0.8] mb-12">
                             redefining <br />
                             <span className="text-transparent text-stroke hover:text-accent transition-colors duration-500">Publishing</span>
                         </h1>
@@ -50,7 +50,7 @@ export default function AboutPage() {
                                 We are the bridge between your raw manuscript and a global audience.
                             </p>
                             <p className="text-gray-400 text-lg md:text-xl leading-relaxed">
-                                Based in the heart of <span className="text-white font-semibold">London, UK</span>, Kandle Publishing was born from a frustration with the "good enough" standard of the self-publishing industry. We believe independent authors deserve the same editorial rigor, design excellence, and marketing firepower as traditional publishing houses—without losing ownership of their work.
+                                Based in the heart of <span className="text-white font-semibold">London, UK</span>, Kandle Direct Publishing was born from a frustration with the "good enough" standard of the self-publishing industry. We believe independent authors deserve the same editorial rigor, design excellence, and marketing firepower as traditional publishing houses—without losing ownership of their work.
                             </p>
                         </motion.div>
                     </div>
@@ -158,11 +158,11 @@ export default function AboutPage() {
                         Ready to write<br /> history?
                     </h2>
                     <p className="text-xl md:text-2xl font-medium mb-12 max-w-2xl mx-auto text-white/90">
-                        Join the 500+ authors who turned their manuscripts into movements with Kandle Publishing.
+                        Join the 500+ authors who turned their manuscripts into movements with Kandle Direct Publishing.
                     </p>
                     <a
                         href="/contact"
-                        className="inline-block bg-white text-accent px-12 py-5 rounded-full text-xl font-bold uppercase hover:bg-black hover:text-white transition-all duration-300 shadow-2xl"
+                        className="inline-block bg-white text-accent px-12 py-5 rounded-full text-xl font-bold uppercase hover:bg-black hover:text-white transition-all duration-300 shadow-2xl hover:scale-105"
                     >
                         Start Your Project
                     </a>

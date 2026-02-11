@@ -14,9 +14,9 @@ export default function CartPage() {
                 <ShoppingBag size={64} className="text-gray-600 mb-6" />
                 <h1 className="text-4xl font-bold text-white mb-4">Your Cart is Empty</h1>
                 <p className="text-gray-400 mb-8 max-w-md">Looks like you haven&apos;t added any books yet. Explore our bookstore to find your next great read.</p>
-                <Link href="/shop" className="px-8 py-3 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-all">
+                {/* <Link href="/shop" className="px-8 py-3 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-all">
                     Browse Books
-                </Link>
+                </Link> */}
             </div>
         );
     }

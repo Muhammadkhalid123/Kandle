@@ -35,7 +35,7 @@ export function PartnerMarquee() {
 
             {/* "THERE'S" Text from screenshot */}
             <div className="container mx-auto px-4 text-center">
-                <h2 className="text-[20vw] font-black uppercase text-primary leading-none tracking-tighter mix-blend-hard-light opacity-90">
+                <h2 className="text-[15vw] md:text-[20vw] font-black uppercase text-primary leading-none tracking-tighter mix-blend-hard-light opacity-90">
                     There&apos;s
                 </h2>
             </div>

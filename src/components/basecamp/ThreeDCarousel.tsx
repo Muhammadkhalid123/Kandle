@@ -29,13 +29,13 @@ export function ThreeDCarousel() {
         <section ref={targetRef} className="relative h-[500vh] bg-[#0B0B0B]">
             <HeroBackground />
             {/* Background Text Layer */}
-            <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden pointer-events-none">
-                <h1 className="text-[10vw] font-black uppercase text-primary opacity-10 leading-none select-none flex items-baseline">
-                    KAND<AnimatedCandle className="mx-[0.05em]" />E DIRECT PUBLISHING
-                </h1>
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center">
+            <div className="sticky top-0 h-screen grid place-items-center overflow-hidden pointer-events-none">
+                <div className="grid *:col-start-1 *:row-start-1 place-items-center w-full">
+                    <h1 className="text-[15vw] md:text-[10vw] font-black uppercase text-primary opacity-10 leading-none select-none flex items-baseline justify-center text-center px-4">
+                        KAND<AnimatedCandle className="mx-[0.05em]" />E DIRECT PUBLISHING
+                    </h1>
                     {/* Outline Text Duplicate for Stroke Effect */}
-                    <h1 className="text-[10vw] font-black uppercase text-transparent opacity-30 leading-none select-none absolute top-0 left-0 right-0 -translate-y-1/2 text-stroke flex items-baseline justify-center">
+                    <h1 className="text-[15vw] md:text-[10vw] font-black uppercase text-transparent opacity-30 leading-none select-none text-stroke flex items-baseline justify-center text-center px-4">
                         KAND<AnimatedCandle className="mx-[0.05em]" />E DIRECT PUBLISHING
                     </h1>
                 </div>
@@ -45,13 +45,13 @@ export function ThreeDCarousel() {
             <div className="sticky top-0 h-screen flex items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-20 md:gap-40 pl-6 md:pl-[20vw]">
                     {/* Intro Card */}
-                    <div className="w-[85vw] md:w-[40vw] h-[60vh] md:h-[70vh] flex flex-col justify-center text-white shrink-0 bg-black/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
+                    <div className="w-[90vw] md:w-[40vw] h-[60vh] md:h-[70vh] flex flex-col justify-center text-white shrink-0 bg-black/60 backdrop-blur-xl rounded-2xl md:rounded-3xl p-6 md:p-12 border border-white/10 shadow-2xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 blur-[100px] rounded-full pointer-events-none" />
-                        <h2 className="text-5xl md:text-8xl font-black uppercase leading-[0.8] mb-8 relative z-10" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255,107,0,0.3)' }}>
+                        <h2 className="text-4xl md:text-8xl font-black uppercase leading-[0.8] mb-8 relative z-10" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 20px rgba(255,107,0,0.3)' }}>
                             We Make<br />Books<br />Happen.
                         </h2>
-                        <p className="text-xl max-w-md font-medium text-gray-300 relative z-10">
-                            Kandle Publishing is the agency for authors who refuse to compromise on quality.
+                        <p className="text-lg md:text-xl max-w-md font-medium text-gray-300 relative z-10">
+                            Kandle Direct Publishing is the agency for authors who refuse to compromise on quality.
                         </p>
                     </div>
 
@@ -60,7 +60,7 @@ export function ThreeDCarousel() {
                         <motion.div
                             key={card.id}
                             style={{ rotateZ: rotate }} // Slight tilt as you scroll
-                            className={`relative w-[80vw] md:w-[35vw] h-[50vh] md:h-[60vh] bg-gradient-to-br ${card.color} shrink-0 rounded-3xl shadow-2xl p-8 md:p-12 flex flex-col justify-between hover:scale-105 transition-transform duration-300 cursor-pointer border border-white/10 overflow-hidden group`}
+                            className={`relative w-[85vw] md:w-[35vw] h-[50vh] md:h-[60vh] bg-gradient-to-br ${card.color} shrink-0 rounded-2xl md:rounded-3xl shadow-2xl p-6 md:p-12 flex flex-col justify-between hover:scale-105 transition-transform duration-300 cursor-pointer border border-white/10 overflow-hidden group`}
                         >
                             {/* Abstract Background Animation */}
                             {/* Background Illustration */}
@@ -77,10 +77,10 @@ export function ThreeDCarousel() {
                                     <card.icon className="w-6 h-6" />
                                 </div>
                                 <span className="block text-sm font-bold uppercase tracking-widest mb-2 text-accent">{card.subtitle}</span>
-                                <h3 className="text-4xl md:text-6xl font-black uppercase leading-none mb-4 group-hover:translate-x-2 transition-transform duration-300">
+                                <h3 className="text-3xl md:text-6xl font-black uppercase leading-none mb-4 group-hover:translate-x-2 transition-transform duration-300">
                                     {card.title}
                                 </h3>
-                                <p className="text-gray-400 text-lg max-w-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                                <p className="text-gray-400 text-base md:text-lg max-w-xs md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 transform md:translate-y-4 md:group-hover:translate-y-0">
                                     {card.desc}
                                 </p>
                             </div>

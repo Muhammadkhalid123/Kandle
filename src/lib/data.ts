@@ -32,14 +32,14 @@ export const books: Book[] = [
         title: "Silent Ocean",
         author: "Emily White",
         price: 24.99,
-        image: "/images/silent-ocean.png",
+        image: "/images/portfolio/one.png",
         category: "Fiction",
         slug: "silent-ocean",
         rating: 4.8,
         reviews: 124,
         description: "A gripping tale of survival and mystery in the depths of the Pacific. Emily White weaves a narrative so compelling, you can taste the salt in the air. When the communication systems of the deep-sea station 'Vortex' go down, Dr. Aris Thorne is left with only his wits and the encroaching darkness.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "January 15, 2025",
             language: "English",
             printLength: "342 pages",
@@ -59,14 +59,14 @@ export const books: Book[] = [
         title: "Modern Econ",
         author: "Dr. A. Smith",
         price: 39.99,
-        image: "/images/modern-econ.png",
+        image: "/images/portfolio/two.png",
         category: "Non-Fiction",
         slug: "modern-econ",
         rating: 4.5,
         reviews: 89,
         description: "Rethinking economic policies for the digital age. Dr. Smith challenges traditional models and proposes a new framework for understanding value in a post-scarcity digital landscape.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "March 10, 2025",
             language: "English",
             printLength: "288 pages",
@@ -86,14 +86,14 @@ export const books: Book[] = [
         title: "Author Signing",
         author: "James Miller",
         price: 19.99,
-        image: "/images/author-signing.png",
+        image: "/images/portfolio/landscape.jpg",
         category: "Events",
         slug: "author-signing-memoirs",
         rating: 5.0,
         reviews: 42,
         description: "An exclusive look into the life of a touring author. James Miller captures the chaos, the joy, and the solitude of the road.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "February 2, 2025",
             language: "English",
             printLength: "210 pages",
@@ -113,14 +113,14 @@ export const books: Book[] = [
         title: "The Darkest Night",
         author: "Sarah Jenkins",
         price: 14.99,
-        image: "/images/silent-ocean.png",
+        image: "/images/portfolio/three.png",
         category: "Fantasy",
         slug: "the-darkest-night",
         rating: 4.2,
         reviews: 56,
         description: "When the sun fails to rise, the kingdom of Solara falls into chaos. A young mage must find the lost lantern before the shadow beasts consume everything.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "April 20, 2025",
             language: "English",
             printLength: "400 pages",
@@ -140,14 +140,14 @@ export const books: Book[] = [
         title: "Crimson Peak",
         author: "Robert Black",
         price: 29.99,
-        image: "/images/modern-econ.png",
+        image: "/images/portfolio/four.png",
         category: "Thriller",
         slug: "crimson-peak",
         rating: 4.7,
         reviews: 210,
         description: "A high-stakes thriller set in the Alps. Espionage, betrayal, and a chase that will leave you breathless.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "May 5, 2025",
             language: "English",
             printLength: "350 pages",
@@ -167,14 +167,14 @@ export const books: Book[] = [
         title: "Starlight Voyage",
         author: "Jessica Lee",
         price: 22.50,
-        image: "/images/silent-ocean.png",
+        image: "/images/portfolio/five.png",
         category: "Sci-Fi",
         slug: "starlight-voyage",
         rating: 4.6,
         reviews: 180,
         description: "The first faster-than-light ship is ready to launch. But not everyone wants humanity to leave the cradle.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "June 12, 2025",
             language: "English",
             printLength: "320 pages",
@@ -194,14 +194,14 @@ export const books: Book[] = [
         title: "Design Systems",
         author: "David Chen",
         price: 45.00,
-        image: "/images/studio-vibe.png",
+        image: "/images/portfolio/six.png",
         category: "Design",
         slug: "design-systems",
         rating: 4.9,
         reviews: 300,
         description: "The comprehensive guide to building scalable UI libraries and maintaining design consistency across large teams.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "July 1, 2025",
             language: "English",
             printLength: "500 pages",
@@ -221,14 +221,14 @@ export const books: Book[] = [
         title: "Culinary Arts",
         author: "Maria Garcia",
         price: 35.00,
-        image: "/images/author-signing.png",
+        image: "/images/portfolio/seven.png",
         category: "Lifestyle",
         slug: "culinary-arts",
         rating: 4.8,
         reviews: 150,
         description: "A journey through the flavors of the Mediterranean. Authentic recipes passed down through generations, adapted for the modern kitchen.",
         details: {
-            publisher: "Kandle Publishing",
+            publisher: "Kandle Direct Publishing",
             publicationDate: "August 15, 2025",
             language: "English",
             printLength: "260 pages",
@@ -272,7 +272,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: "Why minimalism is fading and maximalist textures are taking over the bookshelves.",
         date: "Feb 02, 2026",
         author: "Kandle Team",
-        image: "/images/studio-vibe.png",
+        image: "/images/portfolio/three.png",
         category: "Design",
         comments: [
             { id: 1, user: "Alice Walker", date: "Feb 03, 2026", avatar: "AW", content: "Great insights! I've definitely noticed the trend towards more texture." },
@@ -304,7 +304,7 @@ export const blogPosts: BlogPost[] = [
             <h3 class="text-2xl font-bold mb-4 text-white">Conclusion</h3>
             <p class="mb-6">As we move through 2026, the key takeaway is that "more is more." Readers want richness, they want depth, and they want covers that tell a story before page one is even turned. Whether you're an indie author or a traditional publishing house, investing in a cover that embraces these maximalist, textured trends is the best way to signal that your book is a premium, immersive experience worth their time.</p>
             
-            <p class="mb-6">At Kandle Publishing, we're at the forefront of these trends, helping our authors create covers that don't just sit on a shelf—they jump off it.</p>
+            <p class="mb-6">At Kandle Direct Publishing, we're at the forefront of these trends, helping our authors create covers that don't just sit on a shelf—they jump off it.</p>
         `
     },
     {
@@ -313,7 +313,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: "Breaking down the numbers, the control, and the creative freedom of going indie.",
         date: "Jan 28, 2026",
         author: "Sarah Jenkins",
-        image: "/images/author-signing.png",
+        image: "/images/portfolio/landscape.jpg",
         category: "Industry",
         comments: [],
         content: `
@@ -349,7 +349,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: "Strategies that actually work for first-time authors without a massive budget.",
         date: "Jan 15, 2026",
         author: "James Miller",
-        image: "/images/modern-econ.png",
+        image: "/images/portfolio/two.png",
         category: "Marketing",
         comments: [],
         content: `
@@ -379,7 +379,7 @@ export const blogPosts: BlogPost[] = [
         excerpt: "How font choice affects readability and reader retention in fiction books.",
         date: "Dec 10, 2025",
         author: "Design Lead",
-        image: "/images/silent-ocean.png",
+        image: "/images/portfolio/one.png",
         category: "Typography",
         comments: [],
         content: `
@@ -396,6 +396,117 @@ export const blogPosts: BlogPost[] = [
 
             <h3 class="text-2xl font-bold mb-4 text-white">Conclusion</h3>
             <p class="mb-6">Respect your words enough to dress them well. If you've spent years writing a story, don't let a default Word Doc template ruin the experience. Typography is the voice of your book—make sure it's speaking clearly.</p>
+        `
+    },
+    {
+        id: 5,
+        title: "The Audiobook Boom: Why Feature Films for Your Ears are the Future",
+        excerpt: "Print is classic, but audio is exploding. Here is why failing to produce an audiobook is leaving money on the table in 2026.",
+        date: "Dec 05, 2025",
+        author: "Kandle Team",
+        image: "/images/portfolio/landscape-1.jpg",
+        category: "Production",
+        comments: [],
+        content: `
+            <p class="mb-6">We live in a busy world. Commutes, gym sessions, chores—these are all prime reading times that print books cannot touch. Enter the audiobook. In 2026, audiobooks have surpassed ebooks in revenue growth for the third year running. It is no longer just a "nice to have" format; it is a critical component of any serious author's portfolio.</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">The Rise of Cinematic Audio</h3>
+            <p class="mb-6">The days of a single narrator reading in a monotonous tone are fading. Listeners now crave "cinematic audio"—productions that feature multiple cast members, sound effects (SFX), and subtle musical scores. Platforms like Audible and Spotify have trained audiences to expect high production values. A flat narration can actually hurt your brand if it sounds like it was recorded in a closet.</p>
+            
+            <h3 class="text-2xl font-bold mb-4 text-white">AI vs. Human Narration</h3>
+            <p class="mb-6">This is the elephant in the room. AI voice technology has become terrifyingly good. For non-fiction, technical manuals, or rapid-release serials, AI narration is a viable, cost-effective tool. However, for fiction—especially romance and fantasy—the human emotional nuance is still unbeatable. A great narrator performs the book; they do not just read it. They add sighs, pauses, and inflections that an algorithm simply cannot replicate (yet).</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">Distribution: Exclusive or Wide?</h3>
+            <p class="mb-6">Just like with ebooks, you have a choice. You can go exclusive with ACX (Audible) for higher royalties, or you can go "wide" to platforms like Spotify, Apple Books, Google Play, and libraries (via Hoopla/Overdrive). In 2026, the "wide" strategy is winning. Spotify's entry into the audiobook market has been a game-changer, exposing millions of music listeners to books they would never have bought on Audible.</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">FAQ: Audiobook Production</h3>
+            <div class="space-y-4 mb-6">
+                <div>
+                    <h4 class="font-bold text-accent">Q: How much does it cost to produce an audiobook?</h4>
+                    <p class="text-gray-300">A: A professional narrator typically charges $200-$400 per finished hour (PFH). A 10-hour book might cost $2,000-$4,000 to produce. Revenue share deals are an alternative if you're tight on cash.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-accent">Q: Should I narrate my own book?</h4>
+                    <p class="text-gray-300">A: Unless you are a professional speaker or the book is a highly personal memoir, usually no. Professional narrators have breath control and stamina that takes years to master.</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">Conclusion</h3>
+            <p class="mb-6">Audio is the most intimate format. You are literally inside your reader's head. Treat this format with the respect it deserves, invest in quality production, and you will unlock a completely new audience that likely would never have picked up your paperback.</p>
+        `
+    },
+    {
+        id: 6,
+        title: "Building an Author Brand That Sells While You Sleep",
+        excerpt: "Your book is the product. You are the business. Here is how to build a brand identity that turns casual readers into superfans.",
+        date: "Nov 20, 2025",
+        author: "Sarah Jenkins",
+        image: "/images/portfolio/eight.png",
+        category: "Branding",
+        comments: [],
+        content: `
+            <p class="mb-6">Many authors make the mistake of thinking their brand is just their logo or their website colors. It is not. Your author brand is the *promise* you make to your reader. It is what they expect when they see your name on a cover. Stephen King promises horror. Nora Roberts promises romance. What do *you* promise?</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">Define Your "Reader Experience"</h3>
+            <p class="mb-6">Before you design a logo, ask yourself: How do I want my readers to *feel*? If you write cozy mysteries, your brand should feel warm, inviting, and perhaps a bit quirky. If you write cyberpunk thrillers, your brand needs to be sleek, dark, and high-tech. This feeling should permeate everything—from your Instagram bio to your newsletter sign-off.</p>
+            
+            <h3 class="text-2xl font-bold mb-4 text-white">Consistency is King</h3>
+            <p class="mb-6">Visual consistency builds trust. Use the same profile picture across all social platforms. Use the same fonts on your website as you do in your book interiors. When a reader lands on your Facebook page, they should instantly recognize it as "yours." A fragmented brand confuses potential buyers, and confused buyers do not buy.</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">The Newsletter: Your Most Valuable Asset</h3>
+            <p class="mb-6">We will say it until we are blue in the face: You do not own your social media followers. Algorithms change. Accounts get banned. But you own your email list. Your brand strategy should funnel everyone to your newsletter. Offer a "Reader Magnet"—a free short story or prequel—in exchange for their email. This is the only way to guarantee you can reach your fans when your next book launches.</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">FAQ: Author Branding</h3>
+            <div class="space-y-4 mb-6">
+                <div>
+                    <h4 class="font-bold text-accent">Q: Do I need a logo?</h4>
+                    <p class="text-gray-300">A: Not necessarily a graphic symbol, but you absolutely need a consistent "wordmark" (your name in a specific font) that acts as your logo.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-accent">Q: Can I rebrand later?</h4>
+                    <p class="text-gray-300">A: Yes, but it is painful. It involves updating covers, websites, and social media. It is better to spend time getting it right early on.</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">Conclusion</h3>
+            <p class="mb-6">Your brand is the engine of your career. A great book can sell itself once, but a great brand sells your entire backlist. Invest in understanding who you are and who you serve, and the sales will follow.</p>
+        `
+    },
+    {
+        id: 7,
+        title: "Going Wide vs. KDP Select: The Million Dollar Question",
+        excerpt: "Should you give Amazon exclusivity or sell everywhere? The answer depends on your genre and your long-term goals.",
+        date: "Nov 12, 2025",
+        author: "Kandle Team",
+        image: "/images/portfolio/landscape-2.jpg",
+        category: "Strategy",
+        comments: [],
+        content: `
+            <p class="mb-6">It is the first decision every self-publishing author has to make when uploading to Amazon: "Enroll in KDP Select?" Checking that box gives Amazon exclusive rights to sell your ebook for 90 days. In exchange, you get into Kindle Unlimited (KU), where you are paid per page read. It sounds great, but is it worth giving up the rest of the world?</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">The Case for KDP Select (Exclusivity)</h3>
+            <p class="mb-6">For certain genres, Kindle Unlimited is non-negotiable. If you write Romance, LitRPG, or Thrillers, a huge percentage of your readership is likely subscribed to KU. These "whale readers" consume 3-4 books a week and rarely buy single copies. Being in KU can account for 50-70% of your income. The algorithm also favors KU books, giving them visibility boosts that are hard to replicate otherwise.</p>
+            
+            <h3 class="text-2xl font-bold mb-4 text-white">The Case for Going Wide</h3>
+            <p class="mb-6">"Going Wide" means publishing on Amazon (without exclusivity) AND on Kobo, Apple Books, Barnes & Noble, Google Play, and Draft2Digital. Why do this? Resilience. If Amazon changes its payout rates (which they do) or bans your account (which happens), your income doesn't drop to zero. Furthermore, some countries (like Canada, Australia, and parts of Europe) are Kobo or Apple strongholds. By being exclusive to Amazon, you are invisible to those markets.</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">The Hybrid Strategy</h3>
+            <p class="mb-6">Many savvy authors use a hybrid approach. They launch a book in KDP Select to maximize the initial algorithmic push and capture the KU readers. After the 90-day term is up (and sales start to dip), they pull the book out of exclusivity and "go wide" to capture the long-tail sales on other platforms. This requires careful management but can offer the best of both worlds.</p>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">FAQ: Distribution</h3>
+            <div class="space-y-4 mb-6">
+                <div>
+                    <h4 class="font-bold text-accent">Q: Can I sell paperbacks wide if my ebook is in KDP Select?</h4>
+                    <p class="text-gray-300">A: Yes! KDP Select exclusivity ONLY applies to the digital ebook format. You can sell print copies anywhere you like.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-accent">Q: Is it hard to manage wide distribution?</h4>
+                    <p class="text-gray-300">A: Not with aggregators like Draft2Digital, which allow you to upload once and distribute to dozens of storefronts automatically.</p>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-4 text-white">Conclusion</h3>
+            <p class="mb-6">There is no single right answer. Look at the top 100 books in your specific sub-genre. Are they all in Kindle Unlimited? If so, you probably should be too. If not, going wide might build a more stable, long-term career. Know your market.</p>
         `
     }
 ];

@@ -13,7 +13,7 @@ export default function CheckoutPage() {
         return (
             <div className="min-h-screen pt-32 text-center text-white">
                 <h1 className="text-3xl font-bold mb-4">Your cart is empty</h1>
-                <Link href="/shop" className="text-accent hover:underline">Return to shop</Link>
+                {/* <Link href="/shop" className="text-accent hover:underline">Return to shop</Link> */}
             </div>
         );
     }
@@ -33,9 +33,9 @@ export default function CheckoutPage() {
                 <p className="text-xl text-gray-300 mb-12">
                     Thank you for your purchase. We have sent a confirmation email with your order details and tracking information.
                 </p>
-                <Link href="/shop" className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-full hover:bg-accent hover:text-white transition-all">
+                {/* <Link href="/shop" className="px-10 py-4 bg-white text-black font-bold uppercase tracking-widest rounded-full hover:bg-accent hover:text-white transition-all">
                     Continue Shopping
-                </Link>
+                </Link> */}
             </div>
         );
     }

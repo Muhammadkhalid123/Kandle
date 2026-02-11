@@ -11,7 +11,7 @@ const navigation = [
   { name: "Home", href: "/" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Services", href: "/services" },
-  { name: "Shop", href: "/shop" },
+  // { name: "Shop", href: "/shop" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
@@ -26,20 +26,21 @@ export function Navbar() {
       {/* Floating Logo (Top Left) */}
       <Link
         href="/"
-        className="fixed top-4 left-4 md:top-8 md:left-8 z-50 hover:scale-105 transition-all duration-300 bg-background/95 backdrop-blur-sm px-4 py-2 rounded-lg border border-border shadow-lg"
+        className="fixed top-4 left-4 md:top-8 md:left-8 z-50 w-12 h-12 md:w-16 md:h-16 bg-background/90 backdrop-blur-md flex items-center justify-center rounded-xl border border-border shadow-lg hover:scale-105 transition-all duration-300 group"
       >
-        <Image
-          src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.svg"
-          alt="Kandle Direct Publishing"
-          width={240}
-          height={80}
-          className="h-16 md:h-24 w-auto"
-          priority
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.svg"
+            alt="Kandle Direct Publishing"
+            fill
+            className="object-contain p-1"
+            priority
+          />
+        </div>
       </Link>
 
       {/* Cart Button (Top Right, Left of Menu) */}
-      <Link
+      {/* <Link
         href="/cart"
         className="fixed top-4 right-20 md:top-8 md:right-28 z-50 w-12 h-12 md:w-16 md:h-16 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300 border border-white/10 group"
       >
@@ -51,7 +52,7 @@ export function Navbar() {
             </span>
           )}
         </div>
-      </Link>
+      </Link> */}
 
       {/* Floating Menu Button (Top Right) */}
       <button
@@ -69,9 +70,9 @@ export function Navbar() {
             animate={{ clipPath: "circle(200% at 100% 0)" }}
             exit={{ clipPath: "circle(0% at 100% 0)" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 bg-background z-40 flex items-center justify-center"
+            className="fixed inset-0 bg-background z-40 flex items-center justify-center overflow-hidden p-4"
           >
-            <nav className="flex flex-col gap-6 text-center">
+            <nav className="flex flex-col gap-0.5 md:gap-2 text-center max-h-full overflow-y-auto no-scrollbar py-6">
               {navigation.map((item, i) => (
                 <motion.div
                   key={item.name}
@@ -82,7 +83,7 @@ export function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-4xl md:text-8xl font-bold uppercase tracking-tighter text-white hover:text-accent transition-colors duration-300"
+                    className="block text-3xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter text-white hover:text-accent transition-all duration-300 hover:scale-[1.01]"
                   >
                     {item.name}
                   </Link>
@@ -91,7 +92,7 @@ export function Navbar() {
             </nav>
 
             <div className="absolute bottom-10 left-0 w-full text-center text-white/30 text-sm uppercase tracking-widest">
-              Kandle Publishing © 2026
+              Kandle Direct Publishing © 2026
             </div>
           </motion.div>
         )}

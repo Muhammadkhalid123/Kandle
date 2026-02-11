@@ -98,24 +98,39 @@ export default function ContactPage() {
                                 <button onClick={() => setStatus("idle")} className="text-sm underline uppercase tracking-widest hover:text-accent transition-colors">Send another message</button>
                             </div>
                         ) : (
-                            <form onSubmit={handleSubmit} className="space-y-8">
+                            <form action={async (formData) => {
+                                setStatus("submitting");
+                                import("@/app/actions/sendEmail").then(async (mod) => {
+                                    const result = await mod.sendContactEmail(formData);
+                                    if (result.success) {
+                                        setStatus("success");
+                                    } else {
+                                        setStatus("idle");
+                                        alert("Something went wrong. Please try again.");
+                                    }
+                                });
+                            }} className="space-y-8">
                                 <div>
                                     <h3 className="text-2xl font-bold mb-6">Start a Project</h3>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="group space-y-2">
                                             <label htmlFor="name" className="text-xs uppercase tracking-widest text-gray-500">Name</label>
-                                            <input type="text" id="name" required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700" placeholder="John Doe" />
+                                            <input type="text" id="name" name="name" required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700" placeholder="John Doe" />
                                         </div>
                                         <div className="group space-y-2">
                                             <label htmlFor="email" className="text-xs uppercase tracking-widest text-gray-500">Email</label>
-                                            <input type="email" id="email" required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700" placeholder="john@example.com" />
+                                            <input type="email" id="email" name="email" required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700" placeholder="john@example.com" />
+                                        </div>
+                                        <div className="group space-y-2">
+                                            <label htmlFor="phone" className="text-xs uppercase tracking-widest text-gray-500">Phone</label>
+                                            <input type="tel" id="phone" name="phone" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700" placeholder="+1 (555) 000-0000" />
                                         </div>
                                     </div>
                                 </div>
 
                                 <div className="group space-y-2">
                                     <label htmlFor="service" className="text-xs uppercase tracking-widest text-gray-500">Service Interested In</label>
-                                    <select id="service" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all text-gray-300">
+                                    <select id="service" name="interest" className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all text-gray-300">
                                         <option>Publishing Package</option>
                                         <option>Editing & Proofreading</option>
                                         <option>Cover Design</option>
@@ -126,7 +141,7 @@ export default function ContactPage() {
 
                                 <div className="group space-y-2">
                                     <label htmlFor="message" className="text-xs uppercase tracking-widest text-gray-500">Project Details</label>
-                                    <textarea id="message" rows={5} required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700 resize-none" placeholder="Tell us about your book, word count, and goals..."></textarea>
+                                    <textarea id="message" name="message" rows={5} required className="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-4 text-lg focus:border-accent focus:bg-black/40 outline-none transition-all placeholder:text-gray-700 resize-none" placeholder="Tell us about your book, word count, and goals..."></textarea>
                                 </div>
 
                                 <button

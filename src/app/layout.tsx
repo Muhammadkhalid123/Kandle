@@ -10,6 +10,7 @@ import { cn } from "@/lib/utils";
 import { ContactPopup } from "@/components/layout/ContactPopup";
 import { LiveChatWidget } from "@/components/layout/LiveChatWidget";
 import { CartProvider } from "@/context/CartContext";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -22,10 +23,34 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Kandle Publishing | Redefining Authorship",
+  title: "Kandle Direct Publishing | Redefining Authorship",
   description: "High-end book publishing services for the modern author. Formatting, cover design, and marketing with a competitive edge.",
   icons: {
     icon: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
+    apple: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
+  },
+  openGraph: {
+    title: "Kandle Direct Publishing | Redefining Authorship",
+    description: "High-end book publishing services for the modern author. Formatting, cover design, and marketing with a competitive edge.",
+    url: "https://kandledirectpublishing.com",
+    siteName: "Kandle Direct Publishing",
+    images: [
+      {
+        url: "/images/logo-full.png",
+        width: 1200,
+        height: 630,
+        alt: "Kandle Direct Publishing Logo",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kandle Direct Publishing",
+    description: "High-end book publishing services for the modern author.",
+    images: ["/images/logo-full.png"],
+    creator: "@kandledirect",
   },
 };
 
@@ -49,6 +74,7 @@ export default function RootLayout({
             <CustomCursor />
             <ContactPopup />
             <LiveChatWidget />
+            <CookieConsent />
             <Navbar />
             <main className="min-h-screen">
               {children}

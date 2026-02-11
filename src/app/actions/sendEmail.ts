@@ -12,10 +12,21 @@ export async function sendContactEmail(formData: FormData) {
     // Recipients List
     const recipients = [
         "info@kandledirectpublishing.com", // Assumed email for the domain
-        "muhammadalisoomr110@gmail.com",
-        "aliahk.developer@gmail.com",
-        "khalid8sharpk@gmail.com"
     ];
+
+    if (process.env.EMAIL_RECIPIENT_1) recipients.push(process.env.EMAIL_RECIPIENT_1);
+    if (process.env.EMAIL_RECIPIENT_2) recipients.push(process.env.EMAIL_RECIPIENT_2);
+    if (process.env.EMAIL_RECIPIENT_3) recipients.push(process.env.EMAIL_RECIPIENT_3);
+
+    // Fallback if no env vars (or just keep hardcoded for safety as base)
+    if (process.env.EMAIL_RECIPIENT_1 === undefined &&
+        process.env.EMAIL_RECIPIENT_2 === undefined &&
+        process.env.EMAIL_RECIPIENT_3 === undefined) {
+        // Add defaults only if environment variables are not set at all
+        recipients.push("muhammadalisoomr110@gmail.com");
+        recipients.push("aliahk.developer@gmail.com");
+        recipients.push("khalid8sharpk@gmail.com");
+    }
 
     // Configure Nodemailer Transporter
     // NOTE: For Gmail, you needs an 'App Password' if 2FA is on.
@@ -44,7 +55,7 @@ export async function sendContactEmail(formData: FormData) {
                 <p style="background: #f3f4f6; padding: 12px; border-left: 4px solid #ea580c;">${message}</p>
                 <br/>
                 <hr/>
-                <p style="font-size: 12px; color: #666;">This email was sent from the Kandle Publishing website.</p>
+                <p style="font-size: 12px; color: #666;">This email was sent from the Kandle Direct Publishing website.</p>
             </div>
         `,
     };

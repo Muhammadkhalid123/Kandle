@@ -29,6 +29,10 @@
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+}
+
 .mask-linear {
   mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);

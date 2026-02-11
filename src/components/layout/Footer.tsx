@@ -18,7 +18,7 @@ export function Footer() {
                             className="mb-8 h-20 w-auto"
                         />
                         <span className="block text-sm text-secondary uppercase tracking-widest mb-6 p-1">Ready to start?</span>
-                        <Link href="/contact" className="text-5xl md:text-8xl font-black uppercase tracking-tighter hover:text-accent transition-colors leading-[0.8] block">
+                        <Link href="/contact" className="text-4xl md:text-8xl font-black uppercase tracking-tighter hover:text-accent transition-colors leading-[0.8] block">
                             Let&apos;s Make<br />History.
                         </Link>
                     </div>
@@ -71,7 +71,7 @@ export function Footer() {
                                     { name: "Home", href: "/" },
                                     { name: "About", href: "/about" },
                                     { name: "Services", href: "/services" },
-                                    { name: "Bookstore", href: "/shop" },
+                                    // { name: "Bookstore", href: "/shop" },
                                     { name: "Portfolio", href: "/portfolio" },
                                     { name: "Blog", href: "/blog" },
                                     { name: "Contact", href: "/contact" }
@@ -89,10 +89,10 @@ export function Footer() {
 
                 <div className="flex flex-col md:flex-row justify-between items-end border-t border-gray-800 pt-10 text-xs uppercase tracking-widest text-gray-500">
                     <div className="flex gap-4 mb-4 md:mb-0">
-                        <span>Privacy Policy</span>
+                        <Link href="/privacy-policy" className="hover:text-accent transition-colors">Privacy Policy</Link>
                         <span>Terms of Service</span>
                     </div>
-                    <p>© {new Date().getFullYear()} Kandle Publishing. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Kandle Direct Publishing. All rights reserved.</p>
                 </div>
             </div>
         </footer>
