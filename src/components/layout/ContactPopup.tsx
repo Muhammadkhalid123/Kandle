@@ -73,7 +73,7 @@ export function ContactPopup() {
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.9, y: 20 }}
                         onClick={(e) => e.stopPropagation()}
-                        className="relative bg-surface border border-white/10 w-full max-w-lg p-8 rounded-2xl shadow-2xl overflow-hidden"
+                        className="relative bg-surface border border-white/10 w-full max-w-[440px] max-h-[90vh] p-6 md:p-8 rounded-2xl shadow-2xl overflow-y-auto no-scrollbar"
                     >
                         {/* Decorational Elements */}
                         <div className="absolute top-0 right-0 w-32 h-32 bg-accent/20 blur-[60px] rounded-full pointer-events-none" />
@@ -89,17 +89,17 @@ export function ContactPopup() {
 
                         {!hasSubmitted ? (
                             <>
-                                <div className="text-center mb-8">
-                                    <div className="flex justify-center mb-6">
+                                <div className="text-center mb-6">
+                                    <div className="flex justify-center mb-4">
                                         <Image
-                                            src="/images/form-logo.png"
+                                            src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.png"
                                             alt="Kandle Direct Publishing"
-                                            width={400}
-                                            height={160}
-                                            className="h-40 w-auto object-contain"
+                                            width={300}
+                                            height={120}
+                                            className="h-24 w-auto object-contain"
                                         />
                                     </div>
-                                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">Start Your Publishing Journey</h2>
+                                    <h2 className="text-xl md:text-2xl font-bold text-white mb-2">Start Your Publishing Journey</h2>
                                     <p className="text-gray-400">
                                         Ready to bring your book to life? Get a free consultation with our publishing experts today.
                                     </p>

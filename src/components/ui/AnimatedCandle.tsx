@@ -6,10 +6,10 @@ export function AnimatedCandle({ className }: { className?: string }) {
     return (
         <span className={`inline-flex items-center justify-center relative ${className}`}>
             <svg
-                viewBox="0 0 24 40"
+                viewBox="8 0 8 40"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-[1.1em] w-auto -translate-y-[0.1em]"
+                className="h-[1.1em] w-auto -translate-y-[0.02em] overflow-visible"
             >
                 {/* Candle Body */}
                 <rect x="8" y="16" width="8" height="24" fill="currentColor" rx="1" />

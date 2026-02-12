@@ -31,12 +31,20 @@ export function ThreeDCarousel() {
             {/* Background Text Layer */}
             <div className="sticky top-0 h-screen grid place-items-center overflow-hidden pointer-events-none">
                 <div className="grid *:col-start-1 *:row-start-1 place-items-center w-full">
-                    <h1 className="text-[15vw] md:text-[10vw] font-black uppercase text-primary opacity-10 leading-none select-none flex items-baseline justify-center text-center px-4">
-                        KAND<AnimatedCandle className="mx-[0.05em]" />E DIRECT PUBLISHING
+                    <h1 className="text-[12vw] md:text-[10vw] font-black uppercase text-primary opacity-10 leading-[0.85] select-none flex flex-col items-center text-center px-4 md:px-10">
+                        <span className="flex flex-col md:flex-row items-center md:items-baseline gap-0 md:gap-[0.4em]">
+                            <span className="flex items-baseline">KAND<AnimatedCandle className="mx-[0.05em]" />E</span>
+                            <span>DIRECT</span>
+                        </span>
+                        <span>PUBLISHING</span>
                     </h1>
                     {/* Outline Text Duplicate for Stroke Effect */}
-                    <h1 className="text-[15vw] md:text-[10vw] font-black uppercase text-transparent opacity-30 leading-none select-none text-stroke flex items-baseline justify-center text-center px-4">
-                        KAND<AnimatedCandle className="mx-[0.05em]" />E DIRECT PUBLISHING
+                    <h1 className="text-[12vw] md:text-[10vw] font-black uppercase text-transparent opacity-30 leading-[0.85] select-none text-stroke flex flex-col items-center text-center px-4 md:px-10">
+                        <span className="flex flex-col md:flex-row items-center md:items-baseline gap-0 md:gap-[0.4em]">
+                            <span className="flex items-baseline">KAND<AnimatedCandle className="mx-[0.05em]" />E</span>
+                            <span>DIRECT</span>
+                        </span>
+                        <span>PUBLISHING</span>
                     </h1>
                 </div>
             </div>
