@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google"; // Keeping fonts but Inter will be primary
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -15,24 +15,65 @@ import { CookieConsent } from "@/components/ui/CookieConsent";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap", // Prevent FOIT (Flash of Invisible Text)
+  preload: true,
+  fallback: ["system-ui", "arial"],
 });
 
 const playfair = Playfair_Display({
-  variable: "--font-playfair", // Keeping as secondary accent
+  variable: "--font-playfair",
   subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  fallback: ["Georgia", "serif"],
 });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kandledirectpublishing.com";
+
 export const metadata: Metadata = {
-  title: "Kandle Direct Publishing | Redefining Authorship",
-  description: "High-end book publishing services for the modern author. Formatting, cover design, and marketing with a competitive edge.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Professional Book Publishing Services | Self-Publishing Company Since 2011",
+    template: "%s | Kandle Direct Publishing",
+  },
+  description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production. Publish your book today with our experienced publishing team.",
+  keywords: [
+    // Primary Keywords
+    "book publishing services",
+    "self-publishing company",
+    "professional book publishing",
+    // Service-Based Keywords
+    "affordable publishing packages",
+    "book formatting services",
+    "publishing team for authors",
+    "author royalties",
+    // Benefit-Driven Keywords
+    "keep 100% of royalties",
+    "no hidden publishing fees",
+    "fast book production",
+    "multi-device book testing",
+    // Trust & Authority Keywords
+    "publishing since 2011",
+    "experienced publishing team",
+    "proven track record authors",
+    // Additional SEO Keywords
+    "Amazon KDP",
+    "self-publishing",
+    "book marketing",
+    "cover design",
+    "ebook publishing"
+  ],
+  authors: [{ name: "Kandle Direct Publishing" }],
+  creator: "Kandle Direct Publishing",
+  publisher: "Kandle Direct Publishing",
   icons: {
     icon: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
     apple: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
   },
   openGraph: {
-    title: "Kandle Direct Publishing | Redefining Authorship",
-    description: "High-end book publishing services for the modern author. Formatting, cover design, and marketing with a competitive edge.",
-    url: "https://kandledirectpublishing.com",
+    title: "Professional Book Publishing Services | Keep 100% of Your Royalties",
+    description: "Affordable publishing packages with no hidden fees. Fast book production, professional formatting, and experienced publishing team since 2011. Publish your book today.",
+    url: siteUrl,
     siteName: "Kandle Direct Publishing",
     images: [
       {
@@ -42,7 +83,7 @@ export const metadata: Metadata = {
         alt: "Kandle Direct Publishing Logo",
       },
     ],
-    locale: "en_GB",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -51,6 +92,20 @@ export const metadata: Metadata = {
     description: "High-end book publishing services for the modern author.",
     images: ["/images/logo-full.png"],
     creator: "@kandledirect",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 
@@ -61,6 +116,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Preconnect to critical domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
+        {/* Google Analytics */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+      </head>
       <body
         className={cn(
           inter.variable,
@@ -86,3 +165,4 @@ export default function RootLayout({
     </html>
   );
 }
+

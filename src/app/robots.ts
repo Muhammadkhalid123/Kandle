@@ -1,12 +1,26 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
+    const baseUrl = 'https://kandledirectpublishing.com';
+
     return {
-        rules: {
-            userAgent: "*",
-            allow: "/",
-            disallow: "/private/",
-        },
-        sitemap: "https://kandledirectpublishing.com/sitemap.xml",
+        rules: [
+            {
+                userAgent: '*',
+                allow: '/',
+                disallow: [
+                    '/api/',
+                    '/admin/',
+                    '/private/',
+                    '/cart',
+                    '/checkout',
+                ],
+            },
+            {
+                userAgent: 'GPTBot',
+                disallow: '/',
+            },
+        ],
+        sitemap: `${baseUrl}/sitemap.xml`,
     };
 }

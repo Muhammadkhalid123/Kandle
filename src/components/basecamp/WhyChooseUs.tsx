@@ -7,17 +7,17 @@ const featuresLeft = [
     {
         icon: DollarSign,
         title: "We're Affordable",
-        desc: "Premium quality publishing services that fit your budget without hidden fees."
+        desc: "Affordable publishing packages that fit your budget with no hidden publishing fees."
     },
     {
         icon: Clock,
         title: "Timely & Knowledgeable",
-        desc: "Our expert team guides you through every step, ensuring deadlines are always met."
+        desc: "Our experienced publishing team guides you through every step, ensuring deadlines are always met."
     },
     {
         icon: ShieldCheck,
         title: "100% Royalties",
-        desc: "We never take a cut. You keep 100% of your earnings and rights, always."
+        desc: "Keep 100% of royalties. We never take a cut. You keep all your earnings and author rights, always."
     }
 ];
 
@@ -25,17 +25,17 @@ const featuresRight = [
     {
         icon: Zap,
         title: "Fast & Flawless",
-        desc: "Speed-to-market matters. We deliver rapid results without compromising on quality."
+        desc: "Fast book production matters. We deliver rapid results without compromising on quality."
     },
     {
         icon: Heart,
         title: "Experienced & Reliable",
-        desc: "Helping authors launch their dreams since 2011 with a proven track record."
+        desc: "Publishing since 2011, helping authors launch their dreams with a proven track record."
     },
     {
         icon: Smartphone,
         title: "Universal Compatibility",
-        desc: "We test your books on every major device to ensure a perfect reading experience."
+        desc: "Multi-device book testing on every major platform to ensure a perfect reading experience."
     }
 ];
 
@@ -56,7 +56,7 @@ export function WhyChooseUs() {
                         You'll Love Working With <span className="text-accent">Kandle</span>
                     </h2>
                     <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                        We don't just publish books; we launch careers. Here is why authors choose us again and again.
+                        We don't just publish books; we launch careers. Start your author career with our professional book publishing services.
                     </p>
                 </motion.div>
 
