@@ -11,6 +11,7 @@ import { ContactPopup } from "@/components/layout/ContactPopup";
 import { LiveChatWidget } from "@/components/layout/LiveChatWidget";
 import { CartProvider } from "@/context/CartContext";
 import { CookieConsent } from "@/components/ui/CookieConsent";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -161,6 +162,7 @@ export default function RootLayout({
             <Footer />
           </CartProvider>
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
