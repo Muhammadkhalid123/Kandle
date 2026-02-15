@@ -9,13 +9,13 @@ export function Footer() {
         <footer className="bg-card text-white pt-32 pb-10 border-t border-border relative z-10">
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
-                    <div className="max-w-xl">
+                    <div className="max-6xl">
                         <Image
-                            src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.svg"
-                            alt="Kandle Direct Publishing"
-                            width={240}
-                            height={80}
-                            className="mb-8 h-20 w-auto"
+                            src="/logo.png"
+                            alt="Kandle"
+                            width={400}
+                            height={150}
+                            className="mb-8 h-28 w-auto object-contain rounded-lg"
                         />
                         <span className="block text-sm text-secondary uppercase tracking-widest mb-6 p-1">Ready to start?</span>
                         <Link href="/contact" className="text-4xl md:text-8xl font-black uppercase tracking-tighter hover:text-accent transition-colors leading-[0.8] block">

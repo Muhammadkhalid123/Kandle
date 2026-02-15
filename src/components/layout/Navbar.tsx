@@ -6,7 +6,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Menu as MenuIcon, ShoppingBag } from "lucide-react";
 import { useCart } from "@/context/CartContext";
-
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Portfolio", href: "/portfolio" },
@@ -30,10 +29,10 @@ export function Navbar() {
       >
         <div className="relative w-full h-full">
           <Image
-            src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.svg"
-            alt="Kandle Direct Publishing"
+            src="/images/Kandle Direct Publishing-Logo/Fav Icon  2.svg"
+            alt="Kandle"
             fill
-            className="object-contain scale-125"
+            className="object-contain p-2"
             priority
           />
         </div>

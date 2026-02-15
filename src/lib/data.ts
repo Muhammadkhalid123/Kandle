@@ -510,3 +510,88 @@ export const blogPosts: BlogPost[] = [
         `
     }
 ];
+
+export interface Service {
+    id: string;
+    title: string;
+    tagline: string;
+    description: string;
+    process: string[];
+    features: string[];
+    benefit: string;
+    iconName: string;
+}
+
+export const services: Service[] = [
+    {
+        id: "ghostwriting",
+        iconName: "PenTool",
+        title: "Ghost Book Writing",
+        tagline: "Your Vision, Our Professional Craftsmanship",
+        description: "Turn your ideas, life experiences, or business expertise into a professionally written book. Our expert ghostwriters capture your voice and deliver a high-quality manuscript ready for the world.",
+        process: ["Initial Consultation", "Detailed Outlining", "Collaborative Writing Sessions", "Chapter-by-Chapter Review"],
+        features: ["Fiction & Non-Fiction", "Autobiographies & Memoirs", "Business & Leadership Books", "Creative Storytelling"],
+        benefit: "Keep 100% of your rights and royalties. No mention of us in the credits unless you want it."
+    },
+    {
+        id: "editing",
+        iconName: "Edit",
+        title: "Book Editing & Proofreading",
+        tagline: "Refine Your Voice to Perfection",
+        description: "A professional book requires a professional eye. We offer multi-layered editing services to ensure your manuscript is clear, compelling, and error-free.",
+        process: ["Developmental Critique", "Line-by-Line Refinement", "Copy Editing", "Final Proofreading"],
+        features: ["Structural Analysis", "Grammar & Syntax Correction", "Consistency & Flow Check", "Genre-Specific Editing"],
+        benefit: "Ensure your book meets industry standards and provides an immersive reader experience."
+    },
+    {
+        id: "formatting",
+        iconName: "Layout",
+        title: "Professional Book Formatting",
+        tagline: "Interior Design for Print & Digital",
+        description: "Interior design that flows like a story. We provide professional layout services for Kindle (eBook), Paperback, and Hardcover, compatible with Amazon KDP, IngramSpark, and more.",
+        process: ["Genre-Specific Layout Design", "Font & Typography Selection", "Digital/Print Conversion", "Technical Validation"],
+        features: ["Clickable Table of Contents", "Drop-Caps & Custom Headers", "Orphan & Widow Control", "Print-Ready PDF & EPUB"],
+        benefit: "Technical precision for seamless uploading to all major publishing platforms."
+    },
+    {
+        id: "cover-design",
+        iconName: "ImageIcon",
+        title: "Custom Book Cover Design",
+        tagline: "Wraps That Demand Attention",
+        description: "Don't let them judge your book by its cover—unless it's professional. Our designers create genre-specific concepts that stand out on digital and physical shelves.",
+        process: ["Market Research", "Concept Development", "3D Preview & Mockups", "Print-Wrap Preparation"],
+        features: ["Premium Stock Imagery", "Custom Typography", "Front, Back & Spine Design", "Marketing Graphics Included"],
+        benefit: "Visual impact that hooks browse-readers and converts them into buyers."
+    },
+    {
+        id: "publishing",
+        iconName: "Rocket",
+        title: "Global Publishing Support",
+        tagline: "Wide Distribution, Maximum Reach",
+        description: "Go global with distribution on Amazon, Barnes & Noble, IngramSpark, and Apple Books. We handle the technical setup so you can focus on being an author.",
+        process: ["Account Setup & Optimization", "ISBN & Metadata Assignment", "Global Distribution Setup", "Quality Assurance"],
+        features: ["Amazon KDP Optimization", "IngramSpark Listing", "Apple Books & Google Play", "Library Distribution"],
+        benefit: "Your book available in libraries and bookstores worldwide."
+    },
+    {
+        id: "marketing",
+        iconName: "BarChart",
+        title: "Book Marketing & Promotion",
+        tagline: "Get Discovered by Your Audience",
+        description: "Writing is only half the battle. Our marketing specialists create tailored strategies to increase visibility, drive sales, and build your author brand.",
+        process: ["Audience Analysis", "Strategy Development", "Campaign Execution", "Progress Monitoring"],
+        features: ["Social Media Campaigns", "Book Video Trailers", "Amazon Ads Management", "Author Website Design"],
+        benefit: "A data-driven roadmap to maximize your book's impact on release day and beyond."
+    },
+    {
+        id: "audiobook",
+        iconName: "Headphones",
+        title: "Audiobook Production",
+        tagline: "Turn Your Words Into Sound",
+        description: "Tap into the fastest-growing market in publishing. Professional narration and studio-grade production to bring your story to Audible and iTunes.",
+        process: ["Voice Actor Auditions", "Studio Production", "ACX/Audible Distribution", "Retail Validation"],
+        features: ["High-Quality Mastering", "Professional Narrators", "Audio Metadata Setup", "Launch Support"],
+        benefit: "Reach readers who prefer to listen on the go."
+    }
+];
+

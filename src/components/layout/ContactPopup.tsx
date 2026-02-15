@@ -92,11 +92,11 @@ export function ContactPopup() {
                                 <div className="text-center mb-6">
                                     <div className="flex justify-center mb-4">
                                         <Image
-                                            src="/images/Kandle Direct Publishing-Logo/Kandle Direct Publishing-Logo-05.png"
-                                            alt="Kandle Direct Publishing"
-                                            width={300}
-                                            height={120}
-                                            className="h-24 w-auto object-contain"
+                                            src="/logo.png"
+                                            alt="Kandle"
+                                            width={100}
+                                            height={100}
+                                            className="h-24 w-auto object-contain rounded-xl"
                                         />
                                     </div>
                                     <h2 className="text-xl md:text-2xl font-bold text-white mb-2">Start Your Publishing Journey</h2>

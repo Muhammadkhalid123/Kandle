@@ -1,188 +1,153 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { Check, Rocket, Zap, Clock, Globe, Shield, Users } from "lucide-react";
 import { FloatingElements } from "@/components/ui/FloatingElements";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { services } from "@/lib/data";
+import * as LucideIcons from "lucide-react";
 
-const services = [
-    {
-        id: "editing",
-        title: "Manuscript Editing & Proofreading",
-        description: "Refine your voice and polish your prose to perfection. We ensure your story is clear, compelling, and error-free.",
-        features: ["Developmental Editing", "Line Editing", "Copy Editing", "Proofreading"]
-    },
-    {
-        id: "formatting",
-        title: "Book Formatting (Print & eBook)",
-        description: "Interior design that flows like a story. Professional layout for both physical and digital reading experiences.",
-        features: ["Custom Interior Layout", "Clickable Table of Contents", "Orphan & Widow Control", "Print-Ready PDF & EPUB"]
-    },
-    {
-        id: "cover-design",
-        title: "Custom Book Cover Design",
-        description: "Wraps that demand attention. Genre-specific designs that stand out on every shelf, digital or physical.",
-        features: ["Market-Researched Concepts", "High-Resolution Jackets", "Typography Specialist", "Source Files Included"]
-    },
-    {
-        id: "isbn-copyright",
-        title: "ISBN & Copyright Registration",
-        description: "Protect your work and establish your identity. We handle the bureaucratic details so you own your rights.",
-        features: ["Official ISBN Assignment", "Copyright Filing", "Barcode Generation", "Rights Management Advice"]
-    },
-    {
-        id: "publishing",
-        title: "eBook & Paperback Publishing",
-        description: "Go global with wide distribution. We publish your book to all major platforms including Amazon, IngramSpark, B&N, and Kobo.",
-        features: ["Amazon KDP Setup", "IngramSpark Distribution", "Barnes & Noble Listing", "Kobo Writing Life"]
-    },
-    {
-        id: "audiobook",
-        title: "Audiobook Production & Distribution",
-        description: "Turn your words into sound. Professional narration and production to reach the growing audio market.",
-        features: ["Voice Actor Selection", "ACX/Audible Distribution", "Findaway Voices Setup", "High-Quality Mastering"]
-    },
-    {
-        id: "distribution",
-        title: "Global Book Distribution",
-        description: "Reach readers worldwide. We ensure your book is available in thousands of libraries and bookstores globally.",
-        features: ["Expanded Distribution", "Library Availability", "International Retailers", "Online Bookstores"]
-    },
-    {
-        id: "marketing",
-        title: "Book Marketing & Promotion",
-        description: "Get discovered. tailored strategies to increase visibility and drive sales for your launch and beyond.",
-        features: ["Social Media Campaigns", "Email Marketing Setup", "Influencer Outreach", "Paid Ad Management"]
-    },
-    {
-        id: "kdp-optimization",
-        title: "Amazon KDP Optimization",
-        description: "Master the algorithm. enhance your Amazon presence with SEO-driven keywords and categories.",
-        features: ["Keyword Research", "Category Selection", "A+ Content Creation", "Bestseller Targeting"]
-    },
-    {
-        id: "branding",
-        title: "Author Branding & Website Development",
-        description: "Build your platform. A professional home on the web to connect with readers and showcase your portfolio.",
-        features: ["Custom Author Website", "Brand Identity Design", "Newsletter Integration", "Blog Setup"]
-    },
-    {
-        id: "launch-strategy",
-        title: "Book Launch Strategy",
-        description: "Make a splash. A step-by-step roadmap to maximize your book's impact on release day.",
-        features: ["Launch Timeline", "ARC Team Management", "Virtual Book Tour", "Launch Event Planning"]
-    },
-    {
-        id: "metadata",
-        title: "Metadata & Category Optimization",
-        description: "Be findable. We fine-tune the hidden data that helps search engines and stores categorize your book.",
-        features: ["BISAC Codes", "Search Terms", "Metadata Refinement", "Discoverability Check"]
-    },
-    {
-        id: "description-bio",
-        title: "Product Description & Author Bio",
-        description: "Words that sell. Compelling copy that hooks browsers and converts them into buyers.",
-        features: ["Hook-Driven Synopses", "SEO-Friendly Descriptions", "Professional Author Bio", "Back Cover Copy"]
-    },
-    {
-        id: "translation",
-        title: "Translation & Multilingual Publishing",
-        description: "Speak to the world. Translate your work into new languages to tap into international markets.",
-        features: ["Professional Translation", "Localization", "Foreign Rights", "Multilingual Formatting"]
-    },
-    {
-        id: "pod-setup",
-        title: "Print-on-Demand Setup",
-        description: "Zero inventory, infinite reach. Set up efficient printing systems that fufill orders automatically.",
-        features: ["KDP Print", "IngramSpark POD", "Quality Control", "Distribution Settings"]
-    },
-    {
-        id: "mockups",
-        title: "Book Mockups & Promotional Graphics",
-        description: "Visual assets for social media. Beautiful 3D renders and lifestyle images to promote your book.",
-        features: ["3D ROI Mockups", "Social Media Kits", "Ad Creatives", "Banner Images"]
-    },
-    {
-        id: "sales-tracking",
-        title: "Sales Tracking & Reporting",
-        description: "Know your numbers. specific tools and reports to track your royalties and sales performance.",
-        features: ["Unified Dashboards", "Royalty Calculation", "Trend Analysis", "Sales Forecasting"]
-    },
-    {
-        id: "consultation",
-        title: "Publishing Consultation & Coaching",
-        description: "Expert guidance. One-on-one strategy sessions to navigate the complexities of self-publishing.",
-        features: ["Strategy Calls", "Career Planning", "Problem Solving", "Industry Insights"]
-    }
+const whyChooseUs = [
+    { title: "Affordable & Transparent", icon: <Zap className="text-secondary" />, description: "Quality services at competitive prices with zero hidden fees." },
+    { title: "100% Rights & Royalties", icon: <Shield className="text-secondary" />, description: "You own every word. We stay behind the scenes." },
+    { title: "Global Reach", icon: <Globe className="text-secondary" />, description: "Distribution to major international retailers and libraries." },
+    { title: "Expert Support", icon: <Users className="text-secondary" />, description: "Dedicated project managers for every author's journey." }
 ];
 
 export default function ServicesClient() {
     return (
-        <article className="bg-background text-primary min-h-screen pt-32 pb-20 px-6">
+        <article className="bg-[#050505] text-white min-h-screen pt-32 pb-20 overflow-hidden">
             <FloatingElements />
-            <header className="max-w-[90vw] mx-auto mb-24 relative z-10">
-                <h1 className="text-[10vw] font-bold uppercase tracking-tighter leading-none mb-6">
-                    Professional Book Publishing Services
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-400 max-w-2xl">
-                    Affordable publishing packages from an experienced publishing team. We provide the infrastructure for your literary empire.
-                </p>
+
+            <header className="container mx-auto px-6 mb-32 relative z-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <span className="text-accent font-bold uppercase tracking-[0.3em] text-sm mb-6 block">Kandle Direct Publishing</span>
+                    <h1 className="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
+                        The Full Ecosystem For <span className="text-accent">Authors.</span>
+                    </h1>
+                    <p className="text-xl md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
+                        From the first word to the bestseller list, we provide the professional infrastructure, creative design, and global distribution needed to launch your literary career.
+                    </p>
+                </motion.div>
             </header>
 
-            <div className="border-t border-white/20">
-                {services.map((service, idx) => (
-                    <section
-                        key={service.id}
-                        id={service.id}
-                        className="grid grid-cols-1 md:grid-cols-2 gap-12 py-20 border-b border-white/20 hover:bg-surface transition-colors px-4"
-                        itemScope
-                        itemType="https://schema.org/Service"
-                    >
-                        <div>
-                            <span className="text-secondary font-mono text-sm mb-4 block">0{idx + 1}</span>
-                            <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-8" itemProp="name">
-                                {service.title}
-                            </h2>
-                            <p className="text-2xl text-gray-400 leading-relaxed mb-8" itemProp="description">
-                                {service.description}
-                            </p>
-                            <meta itemProp="provider" content="Kandle Direct Publishing" />
-                            <meta itemProp="serviceType" content="Book Publishing" />
+            {/* Why Choose Us */}
+            <section className="container mx-auto px-6 mb-40">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {whyChooseUs.map((item, idx) => (
+                        <div key={idx} className="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/[0.08] transition-all group">
+                            <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">{item.icon}</div>
+                            <h3 className="text-xl font-bold mb-2 uppercase">{item.title}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
                         </div>
+                    ))}
+                </div>
+            </section>
 
-                        <div className="flex flex-col justify-end">
-                            <ul className="space-y-4">
-                                {service.features.map((feature, fIdx) => (
-                                    <li key={fIdx} className="flex items-center gap-4 text-lg border-b border-white/10 pb-4">
-                                        <Check className="w-5 h-5 text-secondary" />
-                                        <span>{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </section>
-                ))}
+            {/* Main Services List */}
+            <div className="space-y-40 container mx-auto px-6">
+                {services.map((service, idx) => {
+                    const IconComponent = (LucideIcons as any)[service.iconName] || LucideIcons.BookOpen;
+                    return (
+                        <section
+                            key={service.id}
+                            id={service.id}
+                            className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start relative"
+                        >
+                            <div className="sticky top-32">
+                                <div className="flex items-center gap-4 mb-8">
+                                    <span className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
+                                        {idx + 1}
+                                    </span>
+                                    <div className="h-[1px] flex-grow bg-white/10"></div>
+                                </div>
+                                <h2 className="text-5xl md:text-7xl font-bold uppercase tracking-tighter mb-4 leading-none">
+                                    {service.title}
+                                </h2>
+                                <p className="text-accent font-bold text-xl mb-8 uppercase tracking-widest">{service.tagline}</p>
+                                <p className="text-2xl text-gray-400 leading-relaxed mb-12">
+                                    {service.description}
+                                </p>
+
+                                <div className="bg-accent/5 border-l-4 border-accent p-6 rounded-r-2xl mb-12">
+                                    <p className="text-lg italic text-gray-300">
+                                        "{service.benefit}"
+                                    </p>
+                                </div>
+
+                                <Link
+                                    href={`/services/${service.id}`}
+                                    className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold uppercase hover:bg-accent hover:text-white transition-all group"
+                                >
+                                    Explore Service <Rocket size={20} className="group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
+                                </Link>
+                            </div>
+
+                            <div className="space-y-12">
+                                <div className="bg-white/5 border border-white/10 rounded-[2rem] p-10 md:p-14">
+                                    <h3 className="text-2xl font-bold mb-8 flex items-center gap-4">
+                                        <Clock className="text-accent" /> Our Workflow
+                                    </h3>
+                                    <div className="space-y-8">
+                                        {service.process.map((step, sIdx) => (
+                                            <div key={sIdx} className="flex gap-6 relative">
+                                                {sIdx !== service.process.length - 1 && (
+                                                    <div className="absolute left-3 top-8 bottom-0 w-[2px] bg-white/10"></div>
+                                                )}
+                                                <div className="w-6 h-6 rounded-full bg-accent flex-shrink-0 z-10 shadow-[0_0_15px_rgba(var(--accent-rgb),0.5)]"></div>
+                                                <span className="text-xl text-gray-300 leading-tight">{step}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    {service.features.map((feature, fIdx) => (
+                                        <div key={fIdx} className="bg-surface/50 border border-white/5 p-6 rounded-2xl flex items-start gap-4 hover:border-accent/30 transition-colors">
+                                            <Check className="text-accent w-5 h-5 mt-1 flex-shrink-0" />
+                                            <span className="font-medium text-gray-300">{feature}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </section>
+                    );
+                })}
             </div>
 
-            {/* CTA Section */}
-            <section className="mt-24 max-w-4xl mx-auto text-center bg-accent/10 border border-accent/20 rounded-3xl p-12">
-                <h2 className="text-4xl md:text-6xl font-bold uppercase mb-6">
-                    Ready to Publish Your Book Today?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                    Join our proven track record of authors who chose professional book publishing services with no hidden fees and 100% royalties.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                        href="/contact"
-                        className="inline-block bg-accent text-white px-10 py-4 rounded-full text-lg font-bold uppercase hover:bg-accent/90 transition-all transform hover:scale-105 shadow-lg"
-                    >
-                        Get Your Free Quote
-                    </a>
-                    <a
-                        href="/faq"
-                        className="inline-block bg-white/10 text-white border border-white/20 px-10 py-4 rounded-full text-lg font-bold uppercase hover:bg-white/20 transition-all"
-                    >
-                        Learn More
-                    </a>
+            {/* Final Conversion Section */}
+            <section className="mt-60 container mx-auto px-6">
+                <div className="bg-gradient-to-br from-[#111] to-[#050505] border border-white/10 rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/20 blur-[150px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2" />
+                    <div className="relative z-10">
+                        <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+                            Don't Just Write.<br /><span className="text-accent text-glow">Build A Brand.</span>
+                        </h2>
+                        <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto mb-12">
+                            Our team is ready to take your manuscript from the desktop to the global stage. Get a free custom quote for your publishing project today.
+                        </p>
+                        <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                            <Link
+                                href="/contact"
+                                className="bg-accent text-white px-12 py-5 rounded-full text-xl font-bold uppercase hover:bg-accent-hover transition-all transform hover:scale-105 shadow-2xl shadow-accent/40"
+                            >
+                                Get Your Free Quote
+                            </Link>
+                            <Link
+                                href="/portfolio"
+                                className="bg-white/5 text-white border border-white/10 px-12 py-5 rounded-full text-xl font-bold uppercase hover:bg-white/10 transition-all backdrop-blur-md"
+                            >
+                                View Our Portfolio
+                            </Link>
+                        </div>
+                        <p className="mt-12 text-gray-500 uppercase tracking-widest text-sm font-bold">
+                            30-Day Satisfaction Guarantee • 100% Royalties • Expert Support
+                        </p>
+                    </div>
                 </div>
             </section>
         </article>

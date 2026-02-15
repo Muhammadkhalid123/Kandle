@@ -15,8 +15,9 @@ export async function generateStaticParams() {
 export const revalidate = 3600;
 
 // Dynamic metadata generation
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-    const book = books.find((b) => b.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+    const { slug } = await params;
+    const book = books.find((b) => b.slug === slug);
 
     if (!book) {
         return {
@@ -62,12 +63,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
             'product:price:currency': 'USD',
             'product:availability': 'in stock',
             'product:condition': 'new',
+            'product:retailer_item_id': book.slug,
         },
     };
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-    const book = books.find((b) => b.slug === params.slug);
+export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = await params;
+    const book = books.find((b) => b.slug === slug);
 
     if (!book) {
         notFound();
@@ -89,3 +92,4 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         </>
     );
 }
+
