@@ -12,7 +12,7 @@ export function Footer() {
                     <div className="max-6xl">
                         <Image
                             src="/logo.png"
-                            alt="Kandle"
+                            alt="Kandle Direct Publishing Logo"
                             width={400}
                             height={150}
                             className="mb-8 h-28 w-auto object-contain rounded-lg"

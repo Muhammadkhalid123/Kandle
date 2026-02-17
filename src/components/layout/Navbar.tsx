@@ -30,7 +30,7 @@ export function Navbar() {
         <div className="relative w-full h-full">
           <Image
             src="/images/Kandle Direct Publishing-Logo/Fav Icon  2.svg"
-            alt="Kandle"
+            alt="Kandle Direct Publishing - Author Services"
             fill
             className="object-contain p-2"
             priority

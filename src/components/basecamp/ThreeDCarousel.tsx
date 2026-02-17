@@ -39,13 +39,13 @@ export function ThreeDCarousel() {
                         <span>PUBLISHING</span>
                     </h1>
                     {/* Outline Text Duplicate for Stroke Effect */}
-                    <h1 className="text-[12vw] md:text-[10vw] font-black uppercase text-transparent opacity-30 leading-[0.85] select-none text-stroke flex flex-col items-center text-center px-4 md:px-10">
+                    <p className="text-[12vw] md:text-[10vw] font-black uppercase text-transparent opacity-30 leading-[0.85] select-none text-stroke flex flex-col items-center text-center px-4 md:px-10" aria-hidden="true">
                         <span className="flex flex-col md:flex-row items-center md:items-baseline gap-0 md:gap-[0.4em]">
                             <span className="flex items-baseline">KAND<AnimatedCandle className="mx-[0.05em]" />E</span>
                             <span>DIRECT</span>
                         </span>
                         <span>PUBLISHING</span>
-                    </h1>
+                    </p>
                 </div>
             </div>
 
@@ -72,7 +72,9 @@ export function ThreeDCarousel() {
                         >
                             {/* Abstract Background Animation */}
                             {/* Background Illustration */}
-                            <card.icon className="absolute right-4 bottom-4 w-48 h-48 text-white/5 group-hover:text-white/10 transition-colors duration-500 rotate-0 stroke-[0.5] pointer-events-none" />
+                            <div className="absolute -right-8 -bottom-8 w-64 h-64 opacity-[0.05] group-hover:opacity-[0.08] transition-opacity duration-500 rotate-12 pointer-events-none z-0">
+                                <card.icon className="w-full h-full" />
+                            </div>
 
                             {/* Large Number */}
                             <div className="absolute top-6 right-8 text-6xl font-black text-white/10 z-0 font-serif italic">

@@ -12,6 +12,7 @@ import { LiveChatWidget } from "@/components/layout/LiveChatWidget";
 import { CartProvider } from "@/context/CartContext";
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,8 +35,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kandledirectpub
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Professional Book Publishing Services | Self-Publishing Company Since 2011",
+    default: "Professional Book Publishing Services | Kandle Direct",
     template: "%s | Kandle Direct Publishing",
+  },
+  alternates: {
+    canonical: siteUrl,
   },
   description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production. Publish your book today with our experienced publishing team.",
   keywords: [
@@ -72,8 +76,8 @@ export const metadata: Metadata = {
     apple: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
   },
   openGraph: {
-    title: "Professional Book Publishing Services | Keep 100% of Your Royalties",
-    description: "Affordable publishing packages with no hidden fees. Fast book production, professional formatting, and experienced publishing team since 2011. Publish your book today.",
+    title: "Professional Book Publishing Services | Kandle Direct",
+    description: "Affordable publishing packages with no hidden fees. Keep 100% of your royalties. Professional formatting, cover design, and marketing since 2011.",
     url: siteUrl,
     siteName: "Kandle Direct Publishing",
     images: [
@@ -123,18 +127,19 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
         {/* Google Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-M74DE8Y2J5"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-
-              gtag('config', 'G-M74DE8Y2J5');
-            `,
-          }}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-M74DE8Y2J5"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-M74DE8Y2J5');
+          `}
+        </Script>
       </head>
       <body
         className={cn(

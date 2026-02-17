@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { books, blogPosts } from '@/lib/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://kandledirectpublishing.com';
+    const baseUrl = 'https://www.kandledirectpublishing.com';
 
     // Static pages
     const staticPages: MetadataRoute.Sitemap = [
