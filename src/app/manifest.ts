@@ -11,9 +11,14 @@ export default function manifest(): MetadataRoute.Manifest {
         theme_color: "#EA580C",
         icons: [
             {
-                src: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
-                sizes: "any",
-                type: "image/svg+xml",
+                src: "/apple-touch-icon.png",
+                sizes: "180x180",
+                type: "image/png",
+            },
+            {
+                src: "/icon.png",
+                sizes: "512x512",
+                type: "image/png",
             },
         ],
     };

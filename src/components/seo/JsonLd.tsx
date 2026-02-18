@@ -3,12 +3,12 @@ import { WithContext, Organization } from "schema-dts";
 export function JsonLd() {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kandledirectpublishing.com";
 
-    const schema: WithContext<Organization> = {
+    const organizationSchema: WithContext<Organization> = {
         "@context": "https://schema.org",
         "@type": "Organization",
         name: "Kandle Direct Publishing",
         url: siteUrl,
-        logo: `${siteUrl}/images/Kandle Direct Publishing-Logo/Fav Icon .svg`,
+        logo: `${siteUrl}/favicon.ico`,
         description: "Professional book publishing services including editing, formatting, cover design, and marketing for independent authors. Specializing in Amazon KDP, self-publishing, and ebook distribution.",
         foundingDate: "2020",
         slogan: "Redefining Authorship",
@@ -74,11 +74,25 @@ export function JsonLd() {
         },
     };
 
+    const websiteSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Kandle Direct Publishing",
+        "alternateName": ["Kandle Direct", "KDP"],
+        "url": siteUrl
+    };
+
     return (
-        <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+            />
+        </>
     );
 }
 

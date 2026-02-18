@@ -35,13 +35,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.kandledirectpub
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Professional Book Publishing Services | Kandle Direct",
+    default: "Kandle Direct: Professional Book Publishing Services",
     template: "%s | Kandle Direct Publishing",
   },
   alternates: {
     canonical: siteUrl,
   },
-  description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production. Publish your book today with our experienced publishing team.",
+  description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production.",
   keywords: [
     // Primary Keywords
     "book publishing services",
@@ -72,12 +72,15 @@ export const metadata: Metadata = {
   creator: "Kandle Direct Publishing",
   publisher: "Kandle Direct Publishing",
   icons: {
-    icon: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
-    apple: "/images/Kandle Direct Publishing-Logo/Fav Icon .svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   openGraph: {
-    title: "Professional Book Publishing Services | Kandle Direct",
-    description: "Affordable publishing packages with no hidden fees. Keep 100% of your royalties. Professional formatting, cover design, and marketing since 2011.",
+    title: "Kandle Direct: Professional Book Publishing Services",
+    description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production.",
     url: siteUrl,
     siteName: "Kandle Direct Publishing",
     images: [
@@ -93,8 +96,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kandle Direct Publishing",
-    description: "High-end book publishing services for the modern author.",
+    title: "Kandle Direct: Professional Book Publishing Services",
+    description: "Affordable book publishing services with 100% royalties. Professional book formatting, cover design, and marketing. No hidden fees. Fast book production.",
     images: ["/images/logo-full.png"],
     creator: "@kandledirect",
   },
