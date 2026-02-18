@@ -8,7 +8,7 @@ export function JsonLd() {
         "@type": "Organization",
         name: "Kandle Direct Publishing",
         url: siteUrl,
-        logo: `${siteUrl}/favicon.ico`,
+        logo: `${siteUrl}/favicon.svg`,
         description: "Professional book publishing services including editing, formatting, cover design, and marketing for independent authors. Specializing in Amazon KDP, self-publishing, and ebook distribution.",
         foundingDate: "2020",
         slogan: "Redefining Authorship",

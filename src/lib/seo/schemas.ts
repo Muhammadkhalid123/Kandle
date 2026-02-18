@@ -22,7 +22,7 @@ export function generateProductJsonLd(book: Book) {
             '@type': 'Organization',
             name: book.details.publisher,
             url: baseUrl,
-            logo: `${baseUrl}/images/Kandle Direct Publishing-Logo/Fav Icon .svg`,
+            logo: `${baseUrl}/favicon.svg`,
         },
         datePublished: book.details.publicationDate,
         inLanguage: book.details.language,
@@ -127,7 +127,7 @@ export function generateBlogPostJsonLd(post: BlogPost) {
             name: 'Kandle Direct Publishing',
             logo: {
                 '@type': 'ImageObject',
-                url: `${baseUrl}/images/Kandle Direct Publishing-Logo/Fav Icon .svg`,
+                url: `${baseUrl}/favicon.svg`,
             },
         },
         mainEntityOfPage: {

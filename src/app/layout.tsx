@@ -72,11 +72,9 @@ export const metadata: Metadata = {
   creator: "Kandle Direct Publishing",
   publisher: "Kandle Direct Publishing",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "Kandle Direct: Professional Book Publishing Services",
